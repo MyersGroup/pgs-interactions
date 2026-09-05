@@ -1,0 +1,59 @@
+﻿category,field_id,ukb_id,description,ukb_units,OMOPID,phenostring,fg_units
+Urine assays,f.30510_qn,30510,Creatinine in urine,micromole/L,3009508,"Creatinine [Moles/volume] in Urine [mmol/l], sample-wise median",mmol/l
+Urine assays,f.30530_qn,30530,Sodium in urine,millimole/L,3003181,"Sodium [Moles/volume] in Urine [mmol/l], sample-wise median",mmol/l
+Blood count,f.30000_qn,30000,White blood cell count,10^9 cells/Litre,3010813,"Leukocytes [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30010_qn,30010,Red blood cell count,10^12 cells/Litre,3026361,"Erythrocytes [#/volume] in Blood [e12/l], sample-wise median",e12/l
+Blood count,f.30020_qn,30020,Haemoglobin concentration,grams/decilitre,3000963,"Hemoglobin [Mass/volume] in Blood [g/l], sample-wise median",g/l
+Blood count,f.30030_qn,30030,Haematocrit percentage,percent,3009542,"Hematocrit [Volume Fraction] of Blood [%], sample-wise median",%
+Blood count,f.30040_qn,30040,Mean corpuscular volume,femtolitres,3024731,"MCV [Entitic volume] [fl], sample-wise median",fl
+Blood count,f.30050_qn,30050,Mean corpuscular haemoglobin,picograms,3035941,"MCH [Entitic mass] [pg], sample-wise median",pg
+Blood count,f.30060_qn,30060,Mean corpuscular haemoglobin concentration,grams/decilitre,3003338,"MCHC [Mass/volume] [g/l], sample-wise median",g/l
+Blood count,f.30070_qn,30070,Red blood cell distribution width,percent,3002385,"Erythrocyte distribution width [Ratio] [%], sample-wise median",%
+Blood count,f.30080_qn,30080,Platelet count,10^9 cells/Litre,3007461,"Platelets [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30090_qn,30090,Platelet crit,percent,,,
+Blood count,f.30100_qn,30100,Mean platelet volume,femtolitres,,,
+Blood count,f.30110_qn,30110,Platelet distribution width,percent,,,
+Blood count,f.30120_qn,30120,Lymphocyte count,10^9 cells/Litre,3019198,"Lymphocytes [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30130_qn,30130,Monocyte count,10^9 cells/Litre,3001604,"Monocytes [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30140_qn,30140,Neutrophil count,10^9 cells/Litre,3013650,"Neutrophils [#/volume] in Blood by Automated count [e9/l], sample-wise median",e9/l
+Blood count,f.30150_qn,30150,Eosinophil count,10^9 cells/Litre,3013115,"Eosinophils [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30180_qn,30180,Lymphocyte percentage,percent,3002030,"Lymphocytes/100 leukocytes in Blood [%], sample-wise median",%
+Blood count,f.30190_qn,30190,Monocyte percentage,percent,3019069,"Monocytes/100 leukocytes in Blood [%], sample-wise median",%
+Blood count,f.30200_qn,30200,Neutrophil percentage,percent,3018010,"Neutrophils/100 leukocytes in Blood [%], sample-wise median",%
+Blood count,f.30210_qn,30210,Eosinophil percentage,percent,3006504,"Eosinophils/100 leukocytes in Blood [%], sample-wise median",%
+Blood count,f.30220_qn,30220,Basophil percentage,percent,3022096,"Basophils/100 leukocytes in Blood [%], sample-wise median",%
+Blood count,f.30240_qn,30240,Reticulocyte percentage,percent,3027945,"Reticulocytes/100 erythrocytes in Blood [%], sample-wise median",%
+Blood count,f.30250_qn,30250,Reticulocyte count,10^12 cells/Litre,3023520,"Reticulocytes [#/volume] in Blood [e9/l], sample-wise median",e9/l
+Blood count,f.30260_qn,30260,Mean reticulocyte volume,femtolitres,,,
+Blood count,f.30270_qn,30270,Mean sphered cell volume,femtolitres,,,
+Blood count,f.30280_qn,30280,Immature reticulocyte fraction,ratio,,,
+Blood count,f.30290_qn,30290,High light scatter reticulocyte percentage,percent,,,
+Blood count,f.30300_qn,30300,High light scatter reticulocyte count,10^12 cells/Litre,,,
+Blood biochemistry,f.30600_qn,30600,Albumin,g/L,3024561,"Albumin [Mass/volume] in Serum or Plasma [g/l], sample-wise median",g/l
+Blood biochemistry,f.30610_qn,30610,Alkaline phosphatase,U/L,3035995,"Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma [u/l], sample-wise median",u/l
+Blood biochemistry,f.30620_qn,30620,Alanine aminotransferase,U/L,3006923,"Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma [u/l], sample-wise median",u/l
+Blood biochemistry,f.30630_qn,30630,Apolipoprotein A,g/L,,,
+Blood biochemistry,f.30640_qn,30640,Apolipoprotein B,g/L,3014791,"Apolipoprotein B [Mass/volume] in Serum or Plasma [g/l], sample-wise median",g/l
+Blood biochemistry,f.30650_qn,30650,Aspartate aminotransferase,U/L,3013721,"Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma [u/l], sample-wise median",u/l
+Blood biochemistry,f.30660_qn,30660,Direct bilirubin,umol/L,3005772,"Bilirubin.conjugated [Moles/volume] in Serum or Plasma [umol/l], sample-wise median",umol/l
+Blood biochemistry,f.30670_qn,30670,Urea,mmol/L,3020779,"Urea [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30680_qn,30680,Calcium,mmol/L,3015377,"Calcium [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30690_qn,30690,Cholesterol,mmol/L,3019900,"Cholesterol [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30700_qn,30700,Creatinine,umol/L,3020564,"Creatinine [Moles/volume] in Serum or Plasma [umol/l], sample-wise median",umol/l
+Blood biochemistry,f.30710_qn,30710,C-reactive protein,mg/L,3010156,"C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method [mg/l], sample-wise median",mg/l
+Blood biochemistry,f.30720_qn,30720,Cystatin C,mg/L,3030366,"Cystatin C [Mass/volume] in Serum or Plasma [mg/l], sample-wise median",mg/l
+Blood biochemistry,f.30730_qn,30730,Gamma glutamyltransferase,U/L,3026910,"Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma [u/l], sample-wise median",u/l
+Blood biochemistry,f.30740_qn,30740,Glucose,mmol/L,3013826,"Glucose [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30750_qn,30750,Glycated haemoglobin,mmol/mol,3004410,"Hemoglobin A1c/Hemoglobin.total in Blood [mmol/mol], sample-wise median",mmol/mol
+Blood biochemistry,f.30760_qn,30760,HDL cholesterol,mmol/L,3023602,"Cholesterol in HDL [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30770_qn,30770,IGF-1,nmol/L,3014326,"Insulin-like growth factor-I [Moles/volume] in Serum or Plasma [nmol/l], sample-wise median",nmol/l
+Blood biochemistry,f.30780_qn,30780,LDL direct,mmol/L,3001308,"Cholesterol in LDL [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30790_qn,30790,Lipoprotein(a),nmol/L,,,
+Blood biochemistry,f.30810_qn,30810,Phosphate,mmol/L,3003458,"Phosphate [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30830_qn,30830,SHBG,nmol/L,3004248,"Sex hormone binding globulin [Moles/volume] in Serum or Plasma [nmol/l], sample-wise median",nmol/l
+Blood biochemistry,f.30840_qn,30840,Total bilirubin,umol/L,3006140,"Bilirubin.total [Moles/volume] in Serum or Plasma [umol/l], sample-wise median",umol/l
+Blood biochemistry,f.30850_qn,30850,Testosterone,nmol/L,3017446,"Testosterone [Moles/volume] in Serum or Plasma [nmol/l], sample-wise median",nmol/l
+Blood biochemistry,f.30860_qn,30860,Total protein,g/L,3020630,"Protein [Mass/volume] in Serum or Plasma [g/l], sample-wise median",g/l
+Blood biochemistry,f.30870_qn,30870,Triglycerides,mmol/L,3025839,"Triglyceride [Moles/volume] in Serum or Plasma [mmol/l], sample-wise median",mmol/l
+Blood biochemistry,f.30880_qn,30880,Urate,umol/L,3026493,"Urate [Moles/volume] in Serum or Plasma [umol/l], sample-wise median",umol/l
+Blood biochemistry,f.30890_qn,30890,Vitamin D,nmol/L,40771025,"25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Moles/volume] in Serum or Plasma [nmol/l], sample-wise median",nmol/l

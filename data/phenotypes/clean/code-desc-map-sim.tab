@@ -1,0 +1,89 @@
+category	field_id	desc_full	desc_short
+Simulated traits	f.sim_100_rg_nt_0.3_qn	Simulation: 100 loci, regular arch., no transf., alpha = 0, h2=0.3	Sim: 100/rg/nt/a=0/.3
+Simulated traits	f.sim_100_rg_nt_0.6_qn	Simulation: 100 loci, regular arch., no transf., alpha = 0, h2=0.6	Sim: 100/rg/nt/a=0/.6
+Simulated traits	f.sim_100_rg_nt_a5_0.3_qn	Simulation: 100 loci, regular arch., no transf., alpha = -0.5, h2=0.3	Sim: 100/rg/nt/a=-.5/.3
+Simulated traits	f.sim_100_rg_nt_a5_0.6_qn	Simulation: 100 loci, regular arch., no transf., alpha = -0.5, h2=0.6	Sim: 100/rg/nt/a=-.5/.6
+Simulated traits	f.sim_100_rg_sgscbn_0.3_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 100/rg/sgscbn/a=0/.3
+Simulated traits	f.sim_100_rg_sgscbn_0.6_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 100/rg/sgscbn/a=0/.6
+Simulated traits	f.sim_100_rg_sgscbn_a5_0.3_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 100/rg/sgscbn/a=-.5/.3
+Simulated traits	f.sim_100_rg_sgscbn_a5_0.6_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 100/rg/sgscbn/a=-.5/.6
+Simulated traits	f.sim_100_rg_sgscan_0.3_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 100/rg/sgscan/a=0/.3
+Simulated traits	f.sim_100_rg_sgscan_0.6_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 100/rg/sgscan/a=0/.6
+Simulated traits	f.sim_100_rg_sgscan_a5_0.3_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 100/rg/sgscan/a=-.5/.3
+Simulated traits	f.sim_100_rg_sgscan_a5_0.6_qn	Simulation: 100 loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 100/rg/sgscan/a=-.5/.6
+Simulated traits	f.sim_100_cl_nt_0.3_qn	Simulation: 100 loci, clustered arch., no transf., alpha = 0, h2=0.3	Sim: 100/cl/nt/a=0/.3
+Simulated traits	f.sim_100_cl_nt_0.6_qn	Simulation: 100 loci, clustered arch., no transf., alpha = 0, h2=0.6	Sim: 100/cl/nt/a=0/.6
+Simulated traits	f.sim_100_cl_nt_a5_0.3_qn	Simulation: 100 loci, clustered arch., no transf., alpha = -0.5, h2=0.3	Sim: 100/cl/nt/a=-.5/.3
+Simulated traits	f.sim_100_cl_nt_a5_0.6_qn	Simulation: 100 loci, clustered arch., no transf., alpha = -0.5, h2=0.6	Sim: 100/cl/nt/a=-.5/.6
+Simulated traits	f.sim_100_cl_sgscbn_0.3_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 100/cl/sgscbn/a=0/.3
+Simulated traits	f.sim_100_cl_sgscbn_0.6_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 100/cl/sgscbn/a=0/.6
+Simulated traits	f.sim_100_cl_sgscbn_a5_0.3_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 100/cl/sgscbn/a=-.5/.3
+Simulated traits	f.sim_100_cl_sgscbn_a5_0.6_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 100/cl/sgscbn/a=-.5/.6
+Simulated traits	f.sim_100_cl_sgscan_0.3_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 100/cl/sgscan/a=0/.3
+Simulated traits	f.sim_100_cl_sgscan_0.6_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 100/cl/sgscan/a=0/.6
+Simulated traits	f.sim_100_cl_sgscan_a5_0.3_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 100/cl/sgscan/a=-.5/.3
+Simulated traits	f.sim_100_cl_sgscan_a5_0.6_qn	Simulation: 100 loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 100/cl/sgscan/a=-.5/.6
+Simulated traits	f.sim_1k_rg_nt_0.3_qn	Simulation: 1k loci, regular arch., no transf., alpha = 0, h2=0.3	Sim: 1k/rg/nt/a=0/.3
+Simulated traits	f.sim_1k_rg_nt_0.6_qn	Simulation: 1k loci, regular arch., no transf., alpha = 0, h2=0.6	Sim: 1k/rg/nt/a=0/.6
+Simulated traits	f.sim_1k_rg_nt_a5_0.3_qn	Simulation: 1k loci, regular arch., no transf., alpha = -0.5, h2=0.3	Sim: 1k/rg/nt/a=-.5/.3
+Simulated traits	f.sim_1k_rg_nt_a5_0.6_qn	Simulation: 1k loci, regular arch., no transf., alpha = -0.5, h2=0.6	Sim: 1k/rg/nt/a=-.5/.6
+Simulated traits	f.sim_1k_rg_sgscbn_0.3_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 1k/rg/sgscbn/a=0/.3
+Simulated traits	f.sim_1k_rg_sgscbn_0.6_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 1k/rg/sgscbn/a=0/.6
+Simulated traits	f.sim_1k_rg_sgscbn_a5_0.3_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 1k/rg/sgscbn/a=-.5/.3
+Simulated traits	f.sim_1k_rg_sgscbn_a5_0.6_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 1k/rg/sgscbn/a=-.5/.6
+Simulated traits	f.sim_1k_rg_sgscan_0.3_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 1k/rg/sgscan/a=0/.3
+Simulated traits	f.sim_1k_rg_sgscan_0.6_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 1k/rg/sgscan/a=0/.6
+Simulated traits	f.sim_1k_rg_sgscan_a5_0.3_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 1k/rg/sgscan/a=-.5/.3
+Simulated traits	f.sim_1k_rg_sgscan_a5_0.6_qn	Simulation: 1k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 1k/rg/sgscan/a=-.5/.6
+Simulated traits	f.sim_1k_cl_nt_0.3_qn	Simulation: 1k loci, clustered arch., no transf., alpha = 0, h2=0.3	Sim: 1k/cl/nt/a=0/.3
+Simulated traits	f.sim_1k_cl_nt_0.6_qn	Simulation: 1k loci, clustered arch., no transf., alpha = 0, h2=0.6	Sim: 1k/cl/nt/a=0/.6
+Simulated traits	f.sim_1k_cl_nt_a5_0.3_qn	Simulation: 1k loci, clustered arch., no transf., alpha = -0.5, h2=0.3	Sim: 1k/cl/nt/a=-.5/.3
+Simulated traits	f.sim_1k_cl_nt_a5_0.6_qn	Simulation: 1k loci, clustered arch., no transf., alpha = -0.5, h2=0.6	Sim: 1k/cl/nt/a=-.5/.6
+Simulated traits	f.sim_1k_cl_sgscbn_0.3_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 1k/cl/sgscbn/a=0/.3
+Simulated traits	f.sim_1k_cl_sgscbn_0.6_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 1k/cl/sgscbn/a=0/.6
+Simulated traits	f.sim_1k_cl_sgscbn_a5_0.3_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 1k/cl/sgscbn/a=-.5/.3
+Simulated traits	f.sim_1k_cl_sgscbn_a5_0.6_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 1k/cl/sgscbn/a=-.5/.6
+Simulated traits	f.sim_1k_cl_sgscan_0.3_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 1k/cl/sgscan/a=0/.3
+Simulated traits	f.sim_1k_cl_sgscan_0.6_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 1k/cl/sgscan/a=0/.6
+Simulated traits	f.sim_1k_cl_sgscan_a5_0.3_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 1k/cl/sgscan/a=-.5/.3
+Simulated traits	f.sim_1k_cl_sgscan_a5_0.6_qn	Simulation: 1k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 1k/cl/sgscan/a=-.5/.6
+Simulated traits	f.sim_10k_rg_nt_0.3_qn	Simulation: 10k loci, regular arch., no transf., alpha = 0, h2=0.3	Sim: 10k/rg/nt/a=0/.3
+Simulated traits	f.sim_10k_rg_nt_0.6_qn	Simulation: 10k loci, regular arch., no transf., alpha = 0, h2=0.6	Sim: 10k/rg/nt/a=0/.6
+Simulated traits	f.sim_10k_rg_nt_a5_0.3_qn	Simulation: 10k loci, regular arch., no transf., alpha = -0.5, h2=0.3	Sim: 10k/rg/nt/a=-.5/.3
+Simulated traits	f.sim_10k_rg_nt_a5_0.6_qn	Simulation: 10k loci, regular arch., no transf., alpha = -0.5, h2=0.6	Sim: 10k/rg/nt/a=-.5/.6
+Simulated traits	f.sim_10k_rg_sgscbn_0.3_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 10k/rg/sgscbn/a=0/.3
+Simulated traits	f.sim_10k_rg_sgscbn_0.6_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 10k/rg/sgscbn/a=0/.6
+Simulated traits	f.sim_10k_rg_sgscbn_a5_0.3_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 10k/rg/sgscbn/a=-.5/.3
+Simulated traits	f.sim_10k_rg_sgscbn_a5_0.6_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 10k/rg/sgscbn/a=-.5/.6
+Simulated traits	f.sim_10k_rg_sgscan_0.3_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 10k/rg/sgscan/a=0/.3
+Simulated traits	f.sim_10k_rg_sgscan_0.6_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 10k/rg/sgscan/a=0/.6
+Simulated traits	f.sim_10k_rg_sgscan_a5_0.3_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 10k/rg/sgscan/a=-.5/.3
+Simulated traits	f.sim_10k_rg_sgscan_a5_0.6_qn	Simulation: 10k loci, regular arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 10k/rg/sgscan/a=-.5/.6
+Simulated traits	f.sim_10k_cl_nt_0.3_qn	Simulation: 10k loci, clustered arch., no transf., alpha = 0, h2=0.3	Sim: 10k/cl/nt/a=0/.3
+Simulated traits	f.sim_10k_cl_nt_0.6_qn	Simulation: 10k loci, clustered arch., no transf., alpha = 0, h2=0.6	Sim: 10k/cl/nt/a=0/.6
+Simulated traits	f.sim_10k_cl_nt_a5_0.3_qn	Simulation: 10k loci, clustered arch., no transf., alpha = -0.5, h2=0.3	Sim: 10k/cl/nt/a=-.5/.3
+Simulated traits	f.sim_10k_cl_nt_a5_0.6_qn	Simulation: 10k loci, clustered arch., no transf., alpha = -0.5, h2=0.6	Sim: 10k/cl/nt/a=-.5/.6
+Simulated traits	f.sim_10k_cl_sgscbn_0.3_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.3	Sim: 10k/cl/sgscbn/a=0/.3
+Simulated traits	f.sim_10k_cl_sgscbn_0.6_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = 0, h2=0.6	Sim: 10k/cl/sgscbn/a=0/.6
+Simulated traits	f.sim_10k_cl_sgscbn_a5_0.3_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.3	Sim: 10k/cl/sgscbn/a=-.5/.3
+Simulated traits	f.sim_10k_cl_sgscbn_a5_0.6_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. before add. noise, alpha = -0.5, h2=0.6	Sim: 10k/cl/sgscbn/a=-.5/.6
+Simulated traits	f.sim_10k_cl_sgscan_0.3_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.3	Sim: 10k/cl/sgscan/a=0/.3
+Simulated traits	f.sim_10k_cl_sgscan_0.6_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = 0, h2=0.6	Sim: 10k/cl/sgscan/a=0/.6
+Simulated traits	f.sim_10k_cl_sgscan_a5_0.3_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.3	Sim: 10k/cl/sgscan/a=-.5/.3
+Simulated traits	f.sim_10k_cl_sgscan_a5_0.6_qn	Simulation: 10k loci, clustered arch., scaled sigmoid transf. after add. noise, alpha = -0.5, h2=0.6	Sim: 10k/cl/sgscan/a=-.5/.6
+Simulated traits	f.sim_int_1k_e001_all_0.6_qn	Simulation: w/ inters., 1k loci, 1% effect sz., all inters., alpha = 0, h2=0.6	Sim: int/1k/001/all/a=0/.6
+Simulated traits	f.sim_int_1k_e001_all_a5_0.6_qn	Simulation: w/ inters., 1k loci, 1% effect sz., all inters., alpha = -0.5, h2=0.6	Sim: int/1k/001/all/a=-.5/.6
+Simulated traits	f.sim_int_1k_e001_no100_0.6_qn	Simulation: w/ inters., 1k loci, 1% effect sz., no 100% inters., alpha = 0, h2=0.6	Sim: int/1k/001/no100/a=0/.6
+Simulated traits	f.sim_int_1k_e001_no100_a5_0.6_qn	Simulation: w/ inters., 1k loci, 1% effect sz., no 100% inters., alpha = -0.5, h2=0.6	Sim: int/1k/001/no100/a=-.5/.6
+Simulated traits	f.sim_int_1k_e010_all_0.6_qn	Simulation: w/ inters., 1k loci, 10% effect sz., all inters., alpha = 0, h2=0.6	Sim: int/1k/010/all/a=0/.6
+Simulated traits	f.sim_int_1k_e010_all_a5_0.6_qn	Simulation: w/ inters., 1k loci, 10% effect sz., all inters., alpha = -0.5, h2=0.6	Sim: int/1k/010/all/a=-.5/.6
+Simulated traits	f.sim_int_1k_e010_no100_0.6_qn	Simulation: w/ inters., 1k loci, 10% effect sz., no 100% inters., alpha = 0, h2=0.6	Sim: int/1k/010/no100/a=0/.6
+Simulated traits	f.sim_int_1k_e010_no100_a5_0.6_qn	Simulation: w/ inters., 1k loci, 10% effect sz., no 100% inters., alpha = -0.5, h2=0.6	Sim: int/1k/010/no100/a=-.5/.6
+Simulated traits	f.sim_int_1k_e050_all_0.6_qn	Simulation: w/ inters., 1k loci, 50% effect sz., all inters., alpha = 0, h2=0.6	Sim: int/1k/050/all/a=0/.6
+Simulated traits	f.sim_int_1k_e050_all_a5_0.6_qn	Simulation: w/ inters., 1k loci, 50% effect sz., all inters., alpha = -0.5, h2=0.6	Sim: int/1k/050/all/a=-.5/.6
+Simulated traits	f.sim_int_1k_e050_no100_0.6_qn	Simulation: w/ inters., 1k loci, 50% effect sz., no 100% inters., alpha = 0, h2=0.6	Sim: int/1k/050/no100/a=0/.6
+Simulated traits	f.sim_int_1k_e050_no100_a5_0.6_qn	Simulation: w/ inters., 1k loci, 50% effect sz., no 100% inters., alpha = -0.5, h2=0.6	Sim: int/1k/050/no100/a=-.5/.6
+Simulated traits	f.sim_int_1k_e100_all_0.6_qn	Simulation: w/ inters., 1k loci, 100% effect sz., all inters., alpha = 0, h2=0.6	Sim: int/1k/100/all/a=0/.6
+Simulated traits	f.sim_int_1k_e100_all_a5_0.6_qn	Simulation: w/ inters., 1k loci, 100% effect sz., all inters., alpha = -0.5, h2=0.6	Sim: int/1k/100/all/a=-.5/.6
+Simulated traits	f.sim_int_1k_e100_no100_0.6_qn	Simulation: w/ inters., 1k loci, 100% effect sz., no 100% inters., alpha = 0, h2=0.6	Sim: int/1k/100/no100/a=0/.6
+Simulated traits	f.sim_int_1k_e100_no100_a5_0.6_qn	Simulation: w/ inters., 1k loci, 100% effect sz., no 100% inters., alpha = -0.5, h2=0.6	Sim: int/1k/100/no100/a=-.5/.6

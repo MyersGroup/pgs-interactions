@@ -1,0 +1,98 @@
+category	field_id	ukb_id	desc_full	desc_short
+Body size measures	f.48_qn	48	Waist circumference	Waist circumference
+Body size measures	f.49_qn	49	Hip circumference	Hip circumference
+Body size measures	f.waist_hip_qn	NA	Waist-to-hip ratio	Waist-to-hip ratio
+Body size measures	f.50_qn	50	Standing height	Standing height
+Body size measures	f.20015_qn	20015	Sitting height	Sitting height
+Body size measures	f.20015_rel_qn	NA	Sitting height, relative	Sitting height, rel.
+Body size measures	f.leglength_qn	NA	Leg length	Leg length
+Body size measures	f.leglength_rel_qn	NA	Leg length, relative	Leg length, rel.
+Body size measures	f.21001_qn	21001	Body mass index (BMI)	BMI
+Body size measures	f.21002_qn	21002	Weight	Weight
+Impedance measures	f.23099_qn	23099	Body fat percentage	Body fat %
+Impedance measures	f.23100_qn	23100	Whole body fat mass	Whole body fat mass
+Impedance measures	f.23101_qn	23101	Whole body fat-free mass	Whole body fat-free mass
+Impedance measures	f.23102_qn	23102	Whole body water mass	Whole body water mass
+Impedance measures	f.23105_qn	23105	Basal metabolic rate	Basal metabolic rate
+Impedance measures	f.23115_qn	23115	Leg fat percentage	Leg fat %
+Impedance measures	f.23116_qn	23116	Leg fat mass	Leg fat mass
+Impedance measures	f.23117_qn	23117	Leg fat-free mass	Leg fat-free mass
+Impedance measures	f.23118_qn	23118	Leg predicted mass	Leg predicted mass
+Impedance measures	f.23123_qn	23123	Arm fat percentage	Arm fat %
+Impedance measures	f.23124_qn	23124	Arm fat mass	Arm fat mass
+Impedance measures	f.23125_qn	23125	Arm fat-free mass	Arm fat-free mass
+Impedance measures	f.23126_qn	23126	Arm predicted mass	Arm predicted mass
+Impedance measures	f.23127_qn	23127	Trunk fat percentage	Trunk fat %
+Impedance measures	f.23128_qn	23128	Trunk fat mass	Trunk fat mass
+Impedance measures	f.23129_qn	23129	Trunk fat-free mass	Trunk fat-free mass
+Impedance measures	f.23130_qn	23130	Trunk predicted mass	Trunk predicted mass
+Blood pressure	f.102_qn	102	Pulse rate	Pulse rate
+Blood pressure	f.4079_qn	4079	Diastolic blood pressure	Diastolic blood pressure
+Blood pressure	f.4080_qn	4080	Systolic blood pressure	Systolic blood pressure
+Urine assays	f.30510_qn	30510	Creatinine in urine	Creatinine in urine
+Urine assays	f.30530_qn	30530	Sodium in urine	Sodium in urine
+Blood count	f.30000_qn	30000	White blood cell count	White blood cell count
+Blood count	f.30010_qn	30010	Red blood cell count	Red blood cell count
+Blood count	f.30020_qn	30020	Haemoglobin concentration	Haemoglobin conc.
+Blood count	f.30030_qn	30030	Haematocrit percentage	Haematocrit %
+Blood count	f.30040_qn	30040	Mean corpuscular volume	Mean corpuscular vol.
+Blood count	f.30050_qn	30050	Mean corpuscular haemoglobin	Mean corp. haemoglobin
+Blood count	f.30060_qn	30060	Mean corpuscular haemoglobin concentration	Mean corp. haemoglobin conc.
+Blood count	f.30070_qn	30070	Red blood cell distribution width	Red blood cell distr. width
+Blood count	f.30080_qn	30080	Platelet count	Platelet count
+Blood count	f.30090_qn	30090	Platelet crit	Platelet crit
+Blood count	f.30100_qn	30100	Mean platelet volume	Mean platelet vol.
+Blood count	f.30110_qn	30110	Platelet distribution width	Platelet distr. width
+Blood count	f.30120_qn	30120	Lymphocyte count	Lymphocyte count
+Blood count	f.30130_qn	30130	Monocyte count	Monocyte count
+Blood count	f.30140_qn	30140	Neutrophil count	Neutrophil count
+Blood count	f.30150_qn	30150	Eosinophil count	Eosinophil count
+Blood count	f.30180_qn	30180	Lymphocyte percentage	Lymphocyte %
+Blood count	f.30190_qn	30190	Monocyte percentage	Monocyte %
+Blood count	f.30200_qn	30200	Neutrophil percentage	Neutrophil %
+Blood count	f.30210_qn	30210	Eosinophil percentage	Eosinophil %
+Blood count	f.30220_qn	30220	Basophil percentage	Basophil %
+Blood count	f.30240_qn	30240	Reticulocyte percentage	Reticulocyte %
+Blood count	f.30250_qn	30250	Reticulocyte count	Reticulocyte count
+Blood count	f.30260_qn	30260	Mean reticulocyte volume	Mean reticulocyte vol.
+Blood count	f.30270_qn	30270	Mean sphered cell volume	Mean sphered cell vol.
+Blood count	f.30280_qn	30280	Immature reticulocyte fraction	Immature reticulocyte fraction
+Blood count	f.30290_qn	30290	High light scatter reticulocyte percentage	High light scatter reticulocyte %
+Blood count	f.30300_qn	30300	High light scatter reticulocyte count	High light scatter reticulocyte count
+Blood biochemistry	f.30600_qn	30600	Albumin	Albumin
+Blood biochemistry	f.30610_qn	30610	Alkaline phosphatase	Alkaline phosph.
+Blood biochemistry	f.30620_qn	30620	Alanine aminotransferase	Alanine aminotr.
+Blood biochemistry	f.30630_qn	30630	Apolipoprotein A	Apolipoprotein A
+Blood biochemistry	f.30640_qn	30640	Apolipoprotein B	Apolipoprotein B
+Blood biochemistry	f.30650_qn	30650	Aspartate aminotransferase	Aspartate aminotr.
+Blood biochemistry	f.30660_qn	30660	Direct bilirubin	Direct bilirubin
+Blood biochemistry	f.30670_qn	30670	Urea	Urea
+Blood biochemistry	f.30680_qn	30680	Calcium	Calcium
+Blood biochemistry	f.30690_qn	30690	Cholesterol	Cholesterol
+Blood biochemistry	f.30700_qn	30700	Creatinine	Creatinine
+Blood biochemistry	f.30710_qn	30710	C-reactive protein	C-reactive protein
+Blood biochemistry	f.30720_qn	30720	Cystatin C	Cystatin C
+Blood biochemistry	f.30730_qn	30730	Gamma glutamyltransferase	Gamma glutamyltransferase
+Blood biochemistry	f.30740_qn	30740	Glucose	Glucose
+Blood biochemistry	f.30750_qn	30750	Glycated haemoglobin	Glyc. haemoglobin
+Blood biochemistry	f.30760_qn	30760	HDL cholesterol	HDL cholesterol
+Blood biochemistry	f.30770_qn	30770	IGF-1	IGF-1
+Blood biochemistry	f.30780_qn	30780	LDL direct	LDL direct
+Blood biochemistry	f.30790_qn	30790	Lipoprotein(a)	Lipoprotein(a)
+Blood biochemistry	f.30810_qn	30810	Phosphate	Phosphate
+Blood biochemistry	f.30830_qn	30830	SHBG	SHBG
+Blood biochemistry	f.30840_qn	30840	Total bilirubin	Total bilirubin
+Blood biochemistry	f.30850_qn	30850	Testosterone	Testosterone
+Blood biochemistry	f.30860_qn	30860	Total protein	Total protein
+Blood biochemistry	f.30870_qn	30870	Triglycerides	Triglycerides
+Blood biochemistry	f.30880_qn	30880	Urate	Urate
+Blood biochemistry	f.30890_qn	30890	Vitamin D	Vitamin D
+Other traits	f.46_qn	46	Hand grip strength	Hand grip strength
+Other traits	f.78_qn	78	Heel bone mineral density T-score	Heel bone mineral density T-score
+Other traits	f.399_qn	399	Number of incorrect matches in round	No. of incorrect matches in round
+Other traits	f.3143_qn	3143	Ankle spacing width	Ankle spacing width
+Other traits	f.20016_qn	20016	Fluid intelligence score	Fluid intelligence score
+Other traits	f.20023_qn	20023	Mean time to correctly identify matches	Mean time to correctly ID matches
+Other traits	f.20150_qn	20150	FEV1	FEV1
+Other traits	f.20151_qn	20151	FVC	FVC
+Other traits	f.fev1_fvc_qn	NA	FEV1/FVC ratio	FEV1/FVC ratio

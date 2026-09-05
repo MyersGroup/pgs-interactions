@@ -1,0 +1,206 @@
+import pandas as pd
+
+
+# variable defns
+## real traits
+traits_df = pd.read_csv('../data/phenotypes/clean/code-desc-map-real.tab', sep = '\t')
+traits_qn = traits_df['field_id'].tolist()[0:97]
+traits    = [t.replace('_qn', '') for t in traits_qn]
+
+## set of traits that have LOCO SNP*PGS hits
+indep_hits_loco_qn_df = pd.read_csv('../data/phenotypes/clean/snp-pgs-interaction-traits.tab', sep = '\t')
+traits_hits_loco_qn = indep_hits_loco_qn_df['field_id'].tolist()
+
+## simulated traits (no interactions)
+traits_sim_df = pd.read_csv('../data/phenotypes/clean/code-desc-map-sim.tab', sep = '\t')
+traits_sim_qn = traits_sim_df['field_id'].tolist()[0:72]
+traits_sim    = [t.replace('_qn', '') for t in traits_sim_qn]
+
+## simulated traits (with interactions)
+traits_sim_int_qn = traits_sim_df['field_id'].tolist()[72:88]
+traits_sim_int    = [t.replace('_qn', '') for t in traits_sim_int_qn]
+
+## chromosomes
+chromosomes = [str(chr) for chr in range(1, 23)]
+
+## LD clumping parameters
+p1_max = 0.05; r2s = [0.1, 0.9]; r2_iter = 0.9; kbs = 500
+
+## indices for TF PGS files
+st=[str(i) for i in range(1, 1651, 50)]
+en=[str(i) for i in range(50, 1650, 50)] + ['1611']
+tf_ind=[i.zfill(4) + '_' + j.zfill(4) for i,j in zip(st, en)]
+
+## FAME
+fame_phen_snp_key = pd.read_csv('../results/05-new-app/fame/phen-snp-key.tab', sep = '\t')
+fame_phen_snp_key_phen = fame_phen_snp_key['phen'].tolist()
+fame_phen_snp_key_snp = fame_phen_snp_key['snp'].tolist()
+
+## FinnGen
+ukb_fg_key = pd.read_csv('../data/sum-stats/finngen/ukb-finngen-lab-values-match.tab', sep = '\t')
+traits_fg_field_id = ukb_fg_key['field_id'].tolist()
+traits_fg_omopid   = ukb_fg_key['OMOPID'].tolist()
+
+
+
+rule all:
+    input:
+        # 00 PRELIMINARY STEPS
+        # covariates
+        '../data/covars/age-sex-batch-centre-ac-all.tab',
+        # sets of samples
+        expand('../data/sample-ids/filtered/{samples}-ids.tab',
+               samples = ['all', 'wb_all', 'other_gb_vali_all', 'other_gb_test_all']),
+        # phenotypes
+        expand('../data/phenotypes/clean/{phen}.tab', phen=traits),
+        # variant stats
+        expand('../data/imputed-wb_all-stats/allele-counts/ukb_imp_chr{chr}_v3.acount', chr=chromosomes),
+        expand('../data/imputed-wb_all-stats/allele-freq/ukb_imp_chr{chr}_v3.afreq', chr=chromosomes),
+        expand('../data/imputed-wb_all-stats/missing-rates/ukb_imp_chr{chr}_v3.vmiss', chr=chromosomes),
+        expand('../data/imputed-wb_all-stats/hardy-eq/ukb_imp_chr{chr}_v3.hardy', chr=chromosomes),
+        # filtered variant IDs
+        expand('../data/variant-ids/chr{chr}-var-ids.tab', chr=chromosomes),
+        expand('../data/variant-ids/map-posid-rsid/posid-rsid-chr{chr}.tab', chr=chromosomes),
+        expand('../data/imputed-wb_all-stats/minor-alleles/chr{chr}.tab', chr=chromosomes),
+        # download annotations
+        expand('../data/annotations/annovar/gene-anno/annovar-chr{chr}.ensGene.variant_function.gz', chr=chromosomes),
+        expand('../data/annotations/annovar/gene-anno/annovar-chr{chr}.refGene.variant_function.gz', chr=chromosomes),
+        expand('../data/annotations/vep/anno/vep-chr{chr}.most_severe.tab.gz', chr=chromosomes),
+        # simulated traits
+        expand('../data/phenotypes/clean/f.sim_{ncs}_{arch}_{tr}_{alpha}{h2}.tab',
+               ncs=['100', '1k', '10k'], arch=['rg', 'cl'], tr=['nt', 'sgscbn', 'sgscan'], alpha=['', 'a5_'], h2=[0.3, 0.6]),
+        expand('../data/phenotypes/clean/f.sim_int_1k_e{effect_sz}_{inter}_{alpha}0.6.tab',
+               effect_sz=['001', '010', '050', '100'], inter=['all', 'no100'], alpha=['', 'a5_']),
+        # 
+        # 01 BASIC GWAS
+        # regress out covariates and apply INT
+        expand('../results/01-gwas/residuals-covars/{phen}_qn/{phen}_qn-{samples}-resid-covars.tab',
+               phen=traits + traits_sim + traits_sim_int, samples='wb_all'),
+        # run GWAS
+        expand('../results/01-gwas/plink-output/{phen}/{samples}.chr{chr}.{phen}.res.cov.glm.linear.gz',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               samples='wb_all', chr=chromosomes),
+        #
+        # 02 BUILD PGS
+        # LD clumping
+        expand('../results/02-pgs/ld-clump/{phen}/p1_{p1}-r2_{r2}-kb_{kb}/{samples}-chr{chr}-clumped.tab',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               p1=p1_max, r2=r2s, kb=kbs, samples='wb_all', chr=chromosomes),
+        # initial C+T PGS
+        expand('../results/02-pgs/initial/{phen}/r2_{r2}-kb_{kb}/{train_sp}/coeff/p1_opt/chr{chr}-coeff.tab',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               r2=r2s, kb=kbs, train_sp='wb_all', chr=chromosomes),
+        expand('../results/02-pgs/initial/{phen}/r2_{r2}-kb_{kb}/{samples}/pgs-all/p1_opt/{phen}-pgs0-rsq.tab',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               r2=r2s, kb=kbs, samples='wb_all'),
+        # iterative step
+        expand('../results/02-pgs/iterative/{phen}/r2_{r2}-kb_{kb}/{samples}/figs/{phen}-step1-manh.png',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               r2=r2_iter, kb=kbs, samples='wb_all'),  # this is needed so the figs/ folder is created by Snakemake
+        expand('../results/02-pgs/iterative/{phen}/r2_{r2}-kb_{kb}/{samples}/{phen}-pgs-performance.tab',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               r2=r2_iter, kb=kbs, samples='wb_all'),
+        #
+        # 03 INTERACTION GWAS
+        # regress phenotype on PGS with SNP x PGS term
+        expand('../results/03-interaction-gwas/plink-output/{phen}/snp-pgs/{phen}.{samples}.full.chr{chr}.{phen}.res.cov.pgs_full_mc.ac.ctr.glm.linear.gz',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn, samples='wb_all', chr=chromosomes),
+        expand('../results/03-interaction-gwas/plink-output/{phen}/snp-pgs/{phen}.{samples}.loco.chr{chr}.{phen}.res.cov.pgs_full_mc.ac.ctr.glm.linear.gz',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn, samples='wb_all', chr=chromosomes),
+        # identify independent hits
+        expand('../results/03-interaction-gwas/indep-hits/{phen}/snp-pgs/hits/{phen}-{samples}-{pgs}-indep-hits.tab',
+               phen=traits_qn + traits_sim_qn + traits_sim_int_qn,
+               samples='wb_all', pgs=['full', 'loco']),
+        # aggregate independent hits
+        '../results/03-interaction-gwas/indep-hits/aggregate/hits-loco-qn.tab',
+        '../results/03-interaction-gwas/indep-hits/aggregate/hits-full-qn.tab',
+        # make tables counting false positives in null sims
+        expand('../results/03-interaction-gwas/indep-hits/sim_null-overview/sim_null-fp-qn{a}-{h2}.tab',
+               a=['', '-a5'], h2=[0.3, 0.6]),
+        # make table showing sumstats for the LHS SNPs in the positive sims
+        expand('../results/03-interaction-gwas/indep-hits/sim_int-overview/sim_int{a}-lhs-sumstats.tab',
+               a=['', '_a5']),
+        # run GWAS for each ind. hit
+        # LOCO PGS
+        expand('../results/03-interaction-gwas/indep-hits/{phen}/snp-pgs/.{phen}.{samples}.loco.done.txt',
+               phen=traits_qn, samples='wb_all'),
+        # full PGS
+        expand('../results/03-interaction-gwas/indep-hits/{phen}/snp-pgs/.{phen}.{samples}.full.done.txt',
+               phen=traits_qn, samples='wb_all'),
+        # aggregate results
+        '../results/03-interaction-gwas/indep-hits/aggregate/pairwise-hits-all.tab',
+        # find tags of LOCO LHS/RHS hits
+        '../results/03-interaction-gwas/indep-hits/aggregate/tags/hits-loco-qn-tags-0.8.tab',
+        #
+        # 04 TF BINDING
+        # prepare Relate results
+        '../data/1000G/relate/mut/all-snps-relate.RData',
+        # find tags of independent PGS SNPs and compute Bayes Factors
+        expand('../results/04-tf-binding/pgs-snps-tags/{phen}/pgs-snps-tags.RData',
+               phen=traits_hits_loco_qn),
+        # compute weights for PGS SNPs
+        expand('../results/04-tf-binding/coding-epigenetics/{phen}/{annot}-pgs-snps.RData',
+               phen=traits_hits_loco_qn, annot=['coding', 'h3k4me1', 'h3k4me3']),
+        expand('../results/04-tf-binding/tf-binding/{phen}/tf-pgs-snps.RData',
+               phen=traits_hits_loco_qn),
+        # run GWAS
+        expand('../results/04-tf-binding/gwas/{phen}/int-gwas-sumstats.RData',
+               phen=traits_hits_loco_qn),
+        # run stepwise regression
+        expand('../results/04-tf-binding/gwas/{phen}/int-gwas-indep-hits.RData',
+               phen=traits_hits_loco_qn),
+        # aggregate results
+        '../results/04-tf-binding/gwas/aggregate/int-gwas-indep-hits-aggregate.RData',
+        # rerun interaction test with TF PGSs that includes only SNPs in C+T PGS0
+        '../results/04-tf-binding/gwas/aggregate/int-gwas-indep-hits-aggregate-retest.RData',
+        #
+        # 05 NEW APPLICATION
+        # regress out covars
+        expand('../results/05-new-app/residuals-covars/{phen}_qn/{phen}_qn-{samples}-resid-covars.tab',
+               phen=traits, samples=['wb_all', 'other_gb_vali_all', 'other_gb_test_all']),
+        # compute iterative PGS
+        expand('../results/05-new-app/iterative/{phen}/r2_{r2}-kb_{kb}/{samples}/pgs/{phen}-all-pgs-full.tab',
+               phen=traits+traits_qn, samples='wb_all', r2=0.9, kb=500),
+        # mean correction
+        expand('../results/05-new-app/mean-corrected/{phen}/r2_{r2}-kb_{kb}/{phen}-{samples}-pgs-full_mc.tab',
+               phen=traits+traits_qn, samples='wb_all', r2=0.9, kb=500),
+        # PGS*ancestry interactions
+        expand('../results/05-new-app/ancestry-interactions/{phen}/r2_{r2}-kb_{kb}/{phen}-{samples}-resid-covars-pgs-full_mc-ac-centre.tab',
+               phen=traits+traits_qn, samples='wb_all', r2=0.9, kb=500),
+        # compute coding/methylation/TF PGSs
+        expand('../results/05-new-app/coding-epigenetics/{phen}/{annot}-pgs.RData',
+               phen=traits_hits_loco_qn, annot=['coding', 'h3k4me1', 'h3k4me3']),
+        expand('../results/05-new-app/tf-binding/{phen}/tf-pgs-{tf_batch}.RData',
+               phen=traits_hits_loco_qn, tf_batch=tf_ind),
+        # compute initial C+T PGS
+        expand('../results/05-new-app/initial/{phen}/pgs-loco.RData',
+               phen=traits_qn),
+        # test TF interactions by removing RHS hits from TF-PGS
+        '../results/05-new-app/tf-gwas/aggregate/int-gwas-indep-hits-aggregate-retest-pairwise.RData',
+        # FAME
+        expand('../results/05-new-app/fame/genotype-calls/ukb_all_chr.{ext}', ext=['bed', 'bim', 'fam', 'log']),
+        expand('../results/05-new-app/fame/output/{phen}/results-{snp}.tab',
+               zip, phen=fame_phen_snp_key_phen, snp=fame_phen_snp_key_snp),
+        # SME
+        expand('../results/05-new-app/sme/genotype-calls/ukb_imputed_filtered_chr{chr}.{ext}',
+               chr=chromosomes, ext=['bed', 'bim', 'fam', 'log']),
+        expand('../results/05-new-app/sme/output/{phen}/{phen}-{snp}-sme-result.RData',
+               zip, phen=fame_phen_snp_key_phen, snp=fame_phen_snp_key_snp),
+        # FINNGEN
+        # prepare data
+        '../data/sum-stats/finngen/variant-ids-hg38-hg19-ukb.tab.gz',
+        '../results/05-new-app/finngen/bim/fg-ukb-1kg.bim',
+        # run PRS-CS
+        expand('../results/05-new-app/finngen/PRScs/{phen}/{phen}-{omopid}-all-pgs-loco.tab',
+               zip, phen=traits_fg_field_id, omopid=traits_fg_omopid),
+        # retest interactions
+        '../results/05-new-app/finngen/finngen-retest-interactions.rds'
+
+
+
+include: 'rules/00-prelim.smk'
+include: 'rules/01-gwas.smk'
+include: 'rules/02-pgs.smk'
+include: 'rules/03-interaction-gwas.smk'
+include: 'rules/04-tf-binding.smk'
+include: 'rules/05-new-app.smk'
